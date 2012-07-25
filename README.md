@@ -2,11 +2,11 @@
 
 The keyboard in an iOS web view has an InputAccessoryView with Previous, Next and Done buttons.
 
-![with_toolbar](https://github.com/chariotsolutions/cordova-plugin-keyboard_toolbar_remover/raw/master/with_toolbar.png)
+![with_toolbar](https://github.com/don/cordova-plugin-keyboard_toolbar_remover/raw/master/with_toolbar.png)
 
 This plugin allows the toolbar to be hidden.
 
-![toolbar_removed](https://github.com/chariotsolutions/cordova-plugin-keyboard_toolbar_remover/raw/master/toolbar_removed.png)
+![toolbar_removed](https://github.com/don/cordova-plugin-keyboard_toolbar_remover/raw/master/toolbar_removed.png)
 
 # Usage
 
