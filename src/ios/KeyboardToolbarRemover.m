@@ -8,19 +8,20 @@
             
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     
-	CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     
-	[super success:result callbackId:callbackId];
+    [super success:result callbackId:callbackId];
 }
 
 - (void) show:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
 {
     NSString* callbackId = [arguments objectAtIndex:0];
     
-	CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR 
-                                                messageAsString: @"Not Implemented"];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-	[super success:result callbackId:callbackId];
+    CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    
+    [super success:result callbackId:callbackId];
 
 }
 
