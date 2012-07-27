@@ -38,9 +38,14 @@ Copy keyboard_toolbar_remover.js to the www directory of your project.
 
 Edit Cordova.plist.  Add an entry under the plugin section mapping KeyboardToolbarRemover to KeyboardToolbarRemover.
 
+![cordova plist](https://github.com/don/cordova-plugin-keyboard_toolbar_remover/raw/master/cordova.plist.jpg)
+
+
 ## pluginstall
 
 The [pluginstall](https://github.com/alunny/pluginstall) tool will automatically install Cordova plugins that confirm to the [cordova-plugin-spec](https://github.com/alunny/cordova-plugin-spec).
+
+_back your project up before running pluginstall_
 
 Install pluginstall using npm (requires Node.js)
 
