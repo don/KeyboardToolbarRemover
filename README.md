@@ -2,11 +2,11 @@
 
 The keyboard in an iOS web view has an InputAccessoryView with Previous, Next and Done buttons.
 
-![with_toolbar](https://github.com/don/cordova-plugin-keyboard_toolbar_remover/raw/master/with_toolbar.png)
+![with_toolbar](https://github.com/don/KeyboardToolbarRemover/raw/master/with_toolbar.png)
 
 This plugin allows the toolbar to be hidden.
 
-![toolbar_removed](https://github.com/don/cordova-plugin-keyboard_toolbar_remover/raw/master/toolbar_removed.png)
+![toolbar_removed](https://github.com/don/KeyboardToolbarRemover/raw/master/toolbar_removed.png)
 
 # Usage
 
@@ -38,7 +38,7 @@ Copy keyboard_toolbar_remover.js to the www directory of your project.
 
 Edit Cordova.plist.  Add an entry under the plugin section mapping KeyboardToolbarRemover to KeyboardToolbarRemover.
 
-![cordova plist](https://github.com/don/cordova-plugin-keyboard_toolbar_remover/raw/master/cordova.plist.jpg)
+![cordova plist](https://github.com/don/KeyboardToolbarRemover/raw/master/cordova.plist.jpg)
 
 
 ## pluginstall
