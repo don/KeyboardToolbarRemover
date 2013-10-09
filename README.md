@@ -8,52 +8,24 @@ This plugin allows the toolbar to be hidden.
 
 ![toolbar_removed](https://github.com/don/KeyboardToolbarRemover/raw/master/toolbar_removed.png)
 
+# Installation
+
+Assuming you're running Cordova 2.9+ and using the command line interface
+
+    $ cd /path/to/project
+    $ cordova plugin add https://github.com/don/KeyboardToolbarRemover
+
 # Usage
 
-## HTML
+The plugin creates a global variable called `toolbar` when it is installed.
 
-Include the Javascript after cordova.js and before your application's javascript file
-
-	<script type="text/javascript" src="keyboard_toolbar_remover.js"></script>
-	
-In your Javascript, include the module
-
-	var toolbar = cordova.require('cordova/plugin/keyboard_toolbar_remover');
-	
 To disable the toolbar 
 
 	toolbar.hide()
 
 To re-enable the toolbar
-	
+
 	toolbar.show()
-	
-# Installation
-
-## Manual Installation
-
-Copy KeyboardToolbarRemover.h and KeyboardToolbarRemover.m to the Plugins directory of your iOS project.
-
-Copy keyboard_toolbar_remover.js to the www directory of your project.
-
-Edit Cordova.plist.  Add an entry under the plugin section mapping KeyboardToolbarRemover to KeyboardToolbarRemover.
-
-![cordova plist](https://github.com/don/KeyboardToolbarRemover/raw/master/cordova.plist.jpg)
-
-
-## pluginstall
-
-The [pluginstall](https://github.com/alunny/pluginstall) tool will automatically install Cordova plugins that confirm to the [cordova-plugin-spec](https://github.com/alunny/cordova-plugin-spec).
-
-_back your project up before running pluginstall_
-
-Install pluginstall using npm (requires Node.js)
-
-	npm install -g pluginstall
-	
-Install the plugin
-
-	pluginstall ios /path/to/project /path/to/plugin
 
 # Credit
 
@@ -63,7 +35,7 @@ The code to hide the toolbar is based on the [Josh Garnham](http://twitter.com/j
 
 The MIT License
 
-Copyright (c) 2012 Chariot Solutions
+Copyright (c) 2012-3 Chariot Solutions
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
