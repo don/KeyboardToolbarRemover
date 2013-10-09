@@ -1,12 +1,10 @@
 # Keyboard Toolbar Remover Cordova Plugin 
 
-The keyboard in an iOS web view has an InputAccessoryView with Previous, Next and Done buttons.
+The keyboard in an iOS web view has an InputAccessoryView with Previous, Next and Done buttons. This plugin allows the toolbar to be hidden.
 
-![with_toolbar](https://github.com/don/KeyboardToolbarRemover/raw/master/with_toolbar.png)
+![with_toolbar](https://github.com/don/KeyboardToolbarRemover/raw/master/ios7_with_toolbar.png) &nbsp; ![toolbar_removed](https://github.com/don/KeyboardToolbarRemover/raw/master/ios7_toolbar_removed.png)
 
-This plugin allows the toolbar to be hidden.
-
-![toolbar_removed](https://github.com/don/KeyboardToolbarRemover/raw/master/toolbar_removed.png)
+![with_toolbar](https://github.com/don/KeyboardToolbarRemover/raw/master/with_toolbar.png) &nbsp; ![toolbar_removed](https://github.com/don/KeyboardToolbarRemover/raw/master/toolbar_removed.png)
 
 # Installation
 
