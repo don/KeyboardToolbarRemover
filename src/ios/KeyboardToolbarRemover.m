@@ -37,33 +37,37 @@
         }
     }
 
-    // Locate UIWebFormView.
+    // Locate UIWebFormView
     for (UIView *possibleFormView in [keyboardWindow subviews]) {
-        // iOS 5 sticks the UIWebFormView inside a UIPeripheralHostView.
-        if ([[possibleFormView description] rangeOfString:@"UIPeripheralHostView"].location != NSNotFound) {
-
-            // remove the border above the toolbar in iOS 6
-            [[possibleFormView layer] setMasksToBounds:YES];
-
-            for (UIView *subviewWhichIsPossibleFormView in [possibleFormView subviews]) {
-                if ([[subviewWhichIsPossibleFormView description] rangeOfString:@"UIWebFormAccessory"].location != NSNotFound) {
-                    [subviewWhichIsPossibleFormView removeFromSuperview];
-
-                    // http://stackoverflow.com/questions/10746998/phonegap-completely-removing-the-black-bar-from-the-iphone-keyboard/10796550#10796550
+        if ([[possibleFormView description] hasPrefix:@"<UIPeripheralHostView"]) {
+            for (UIView* peripheralView in [possibleFormView subviews]) {
+                
+                // hides the backdrop (iOS 7)
+                if ([[peripheralView description] hasPrefix:@"<UIKBInputBackdropView"]) {
+                    //skip the keyboard background....hide only the toolbar background
+                    if ([peripheralView frame].origin.y == 0){
+                        [[peripheralView layer] setOpacity:0.0];
+                    }
+                }
+                // hides the accessory bar
+                if ([[peripheralView description] hasPrefix:@"<UIWebFormAccessory"]) {
+                    // remove the extra scroll space for the form accessory bar
                     UIScrollView *webScroll;
                     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0) {
                         webScroll = [[self webView] scrollView];
                     } else {
                         webScroll = [[[self webView] subviews] lastObject];
                     }
-
-                    CGRect newFrame = [webScroll frame];
-
-                    float accessoryHeight = [subviewWhichIsPossibleFormView frame].size.height;
-                    newFrame.size.height += accessoryHeight;
-
-                    [subviewWhichIsPossibleFormView removeFromSuperview];
-                    [webScroll setFrame:newFrame];
+                    CGRect newFrame = webScroll.frame;
+                    newFrame.size.height += peripheralView.frame.size.height;
+                    webScroll.frame = newFrame;
+                    
+                    // remove the form accessory bar
+                    [peripheralView removeFromSuperview];
+                }
+                // hides the thin grey line used to adorn the bar (iOS 6)
+                if ([[peripheralView description] hasPrefix:@"<UIImageView"]) {
+                    [[peripheralView layer] setOpacity:0.0];
                 }
             }
         }
