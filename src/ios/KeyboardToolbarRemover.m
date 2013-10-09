@@ -3,26 +3,22 @@
 
 @implementation KeyboardToolbarRemover
 
-- (void) hide:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
+- (void) hide:(CDVInvokedUrlCommand*)command
 {
-    NSString* callbackId = [arguments objectAtIndex:0];
-
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
 
     CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
 
-    [super success:result callbackId:callbackId];
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 
-- (void) show:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+- (void) show:(CDVInvokedUrlCommand*)command
 {
-    NSString* callbackId = [arguments objectAtIndex:0];
-
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 
     CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
 
-    [super success:result callbackId:callbackId];
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 
 }
 

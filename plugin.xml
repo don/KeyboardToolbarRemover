@@ -1,15 +1,20 @@
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.chariotsolutions.cordova.plugin.keyboard_toolbar_remover"
     version="0.0.1">
-	<engines>
-	    <engine name="cordova" version=">=2.0.0" />
-	</engines>
-	<name>KeyboardToolbarRemover</name>
-	<asset src="www/keyboard_toolbar_remover.js" target="keyboard_toolbar_remover.js" />
-	<platform name="ios">
-	    <header-file src="KeyboardToolbarRemover.h" />	
-	    <source-file src="KeyboardToolbarRemover.m" />	
-		<plugins-plist key="KeyboardToolbarRemover" string="KeyboardToolbarRemover" />	
-    </platform>	
+    <name>KeyboardToolbarRemover</name>
+    <js-module src="www/keyboard_toolbar_remover.js" name="keyboard_toolbar_remover">
+        <clobbers  target="window.keyboard_toolbar_remover"/>
+    </js-module>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="KeyboardToolbarRemover">
+                <param name="ios-package" value="KeyboardToolbarRemover"/>
+            </feature>
+		</config-file>
+		<header-file src="src/ios/KeyboardToolbarRemover.h" />
+	    <source-file src="src/ios/KeyboardToolbarRemover.m" />
+    </platform>
 </plugin>
