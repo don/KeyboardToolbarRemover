@@ -1,8 +1,6 @@
 /*global cordova*/
 'use strict';
 
-cordova.define("cordova/plugin/keyboard_toolbar_remover", function (require, exports, module) {
-
     var exec = cordova.require('cordova/exec'),
         win = function (success) {
             // do nothing, succeed quietly
@@ -31,4 +29,3 @@ cordova.define("cordova/plugin/keyboard_toolbar_remover", function (require, exp
         hide: hide,
         show: show
     };
-});
