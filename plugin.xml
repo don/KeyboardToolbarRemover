@@ -2,12 +2,22 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.chariotsolutions.cordova.plugin.keyboard_toolbar_remover"
-    version="0.0.1">
-    <name>KeyboardToolbarRemover</name>
-    <js-module src="www/keyboard_toolbar_remover.js" name="keyboard_toolbar_remover">
-        <clobbers  target="window.keyboard_toolbar_remover"/>
+    version="0.0.2">
+
+    <name>Keyboard Toolbar Remover</name>
+
+    <description>Allows the Previous, Next and Done buttons in an iOS web view to be hidden</description>
+
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=2.9.0" />
+    </engines>
+
+    <js-module src="www/keyboard_toolbar_remover.js" name="KeyboardToolbarRemover">
+        <clobbers target="toolbar"/>
     </js-module>
-    <!-- ios -->
+
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="KeyboardToolbarRemover">
@@ -17,4 +27,5 @@
 		<header-file src="src/ios/KeyboardToolbarRemover.h" />
 	    <source-file src="src/ios/KeyboardToolbarRemover.m" />
     </platform>
+
 </plugin>
