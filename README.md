@@ -27,9 +27,12 @@ To re-enable the toolbar
 
 	toolbar.show()
 
-# Credit
+# Credits
 
-The code to hide the toolbar is based on the [Josh Garnham](http://twitter.com/jgarnham)'s code in a [blog post](http://ios-blog.co.uk/tutorials/rich-text-editing-a-simple-start-part-1/). (Scroll down to the Bonus Code section.)
+The original code to hide the toolbar is based on the [Josh Garnham](http://twitter.com/jgarnham)'s code in a [blog post](http://ios-blog.co.uk/tutorials/rich-text-editing-a-simple-start-part-1/). (Scroll down to the Bonus Code section.)
+
+[Steve Smith](https://github.com/stevenpsmith)'s iOS 7 fix was influenced by [a stack overflow post](http://stackoverflow.com/questions/18837551/remove-keyboard-form-toolbar-on-ios7-leaves-a-blur-behind/19042392#19042392).
+[Michael Scholz](https://github.com/MichaelRando) and [Shinichi Hosokawa](https://github.com/shosokawa) provided patches for Cordova 3.0 compatibility.
 
 # License
 
