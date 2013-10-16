@@ -12,7 +12,7 @@ Assuming you're running Cordova 2.9+ and using the command line interface
 
     $ cd /path/to/project
     $ cordova plugin add https://github.com/don/KeyboardToolbarRemover
-
+    
 # Usage
 
 The plugin creates a global variable called `toolbar` when it is installed.
@@ -24,6 +24,10 @@ To disable the toolbar
 To re-enable the toolbar
 
 	toolbar.show()
+	
+## Troubleshooting
+
+If you see a bar above the keyboard with iOS7, try adding `height=device-height` to the viewport meta tag. See [Issue 9](https://github.com/don/KeyboardToolbarRemover/issues/9) for more details.
 
 # Credits
 
