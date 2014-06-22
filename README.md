@@ -1,3 +1,5 @@
+**NOTE:** I recommend using the Corodva [Keyboard Plugin](https://github.com/apache/cordova-plugins/tree/master/keyboard)  instead of this one. The Cordova Keyboard Plugin has better support for resizing and works with Cordova 3.2+.
+
 # Keyboard Toolbar Remover Cordova Plugin 
 
 The keyboard in an iOS web view has an InputAccessoryView with Previous, Next and Done buttons. This plugin allows the toolbar to be hidden.
