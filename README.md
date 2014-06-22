@@ -1,4 +1,4 @@
-**NOTE:** I recommend using the Corodva [Keyboard Plugin](https://github.com/apache/cordova-plugins/tree/master/keyboard)  instead of this one. The Cordova Keyboard Plugin has better support for resizing and works with Cordova 3.2+.
+**NOTE:** I recommend using the Cordova [Keyboard Plugin](https://github.com/apache/cordova-plugins/tree/master/keyboard)  instead of this one. The Cordova Keyboard Plugin has better support for resizing and works with Cordova 3.2+.
 
 # Keyboard Toolbar Remover Cordova Plugin 
 
